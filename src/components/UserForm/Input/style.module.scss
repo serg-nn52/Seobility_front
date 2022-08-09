@@ -1,0 +1,53 @@
+@import 'styles/colors';
+
+.input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  label {
+    color: $label-color;
+  }
+  input {
+    height: 30px;
+    padding: 3px 10px;
+    border: none;
+    cursor: pointer;
+    color: $black;
+    border-radius: 5px;
+    &::placeholder {
+      opacity: 0.8;
+    }
+    &:focus {
+      border: 1px $blue solid;
+      outline: none;
+    }
+  }
+  textarea {
+    min-height: 100px;
+    padding: 3px 10px;
+    border: none;
+    cursor: pointer;
+    color: $black;
+    border-radius: 5px;
+    resize: none;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    &::placeholder {
+      opacity: 0.8;
+    }
+    &:focus {
+      border: 1px $blue solid;
+      outline: none;
+    }
+  }
+  .error {
+    height: 15px;
+    color: $error-color;
+  }
+  .hide {
+    opacity: 0;
+    height: 15px;
+  }
+}
