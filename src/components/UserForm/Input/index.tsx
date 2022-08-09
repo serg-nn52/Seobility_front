@@ -43,7 +43,8 @@ const Input: React.FC<IPropsInput> = (props) => {
     switch (parameter) {
       case 'name':
         if (
-          (user[parameter].split(' ').length > 2 ||
+          (user[parameter].split(' ').length !== 2 ||
+            user[parameter].split(' ').includes('') ||
             !/^[a-z\s]+$/iu.test(user[parameter])) &&
           user[parameter] !== ''
         ) {
