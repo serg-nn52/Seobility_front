@@ -62,7 +62,10 @@ const UserForm: React.FC = () => {
     if (!isErrorValidation && !isEmptyField) {
       setRequestStatus('pending');
       (info.current! as HTMLDivElement).innerHTML = '';
-      const res = await apiPost('http://localhost:5000/api/user', user);
+      const res = await apiPost(
+        'https://seobility.herokuapp.com/api/user',
+        user,
+      );
       if (res.succes) {
         setUser(initialState);
         setRequestStatus('fullfild');
