@@ -1,12 +1,8 @@
-/* eslint-disable prefer-const */
-/* eslint-disable no-nested-ternary */
-/* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useRef, useState } from 'react';
 import Preloader from 'components/Preloader';
 import { apiPost } from 'network';
-import style from './style.module.scss';
 import Input from './Input';
+import style from './style.module.scss';
 
 export interface IUser {
   name: string;
